@@ -592,6 +592,9 @@ template {
 }
 
 @media (max-width: 480px) {
+  .navbar-top__content {
+    padding: 28px	0;
+  }
   .logo {
     width: 99px;
   }
