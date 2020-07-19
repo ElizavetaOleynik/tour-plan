@@ -12,46 +12,55 @@
 </head>
 
 <body>
-	<header class="header">
-		<div class="container">
-			<div class="header-top">
-				<a class="logo header__logo" href="#">
-					<img class="logo__img" src="img/logo-gorizontal.svg" alt="logo: Best Tour Plan">
-				</a>
-				<form class="search header__search" action="#">
-					<input class="search__input" type="text" placeholder="Search Location">
-					<button class="search__button">
-						<img src="img/search.svg" alt="icon: search">
-					</button>
-				</form>
-				<a class="user" href="#">
-					<div class="user__avatar">
-						<img class="user__img" src="img/user.jpg" alt="avatar: Nathan">
-					</div>
-					<span class="user__name">Nathan</span>
-				</a>
-			</div>
-		</div>
-		<!-- /.container -->
-		<!-- /.header-top -->
-		<div class="header-bottom">
+	<header class="navbar">
+		<div class="navbar-top">
 			<div class="container">
-				<ul class="header-menu">
-					<li class="header-menu__item"><a href="#" class="header-menu__link">All Deals</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__link">Hotels</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__link">Activities</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__link">Hotel Day Packages</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__link">Restaurants</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__link">Events</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__link">Rodrigues</a></li>
-				</ul>
+				<div class="navbar-top__content">
+					<a class="logo" href="#">
+						<img class="logo__img" src="img/logo-gorizontal.svg" alt="logo: Best Tour Plan">
+					</a>
+					<!-- /.logo -->
+					<form class="search navbar__search" action="#">
+						<input class="search__input" type="text" placeholder="Search Location">
+						<button class="search__button">
+							<img src="img/search.svg" alt="icon: search">
+						</button>
+					</form>
+					<!-- /.search -->
+					<a class="user" href="#">
+						<div class="user__avatar">
+							<img class="user__img" src="img/user.jpg" alt="avatar: Nathan">
+						</div>
+						<span class="user__name">Nathan</span>
+					</a>
+					<!-- /.user -->
+					<div class="menu-burger">
+						<span class="menu-burger__line"></span>
+					</div>
+					<!-- /.burger -->
+				</div>
 			</div>
 			<!-- /.container -->
 		</div>
-
-
+		<!-- /.navbar-top -->
+		<div class="navbar-bottom">
+			<div class="container">
+				<ul class="navbar-menu">
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Restaurants</a></li>
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
+					<li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
+				</ul>
+				<!-- /.navbar-menu -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.navbar-bottom -->
 	</header>
-	<!-- /.header -->
+	<!-- /.navbar -->
 </body>
 
 </html>
