@@ -1,17 +1,19 @@
-.header
-	background:	#FFF
+.navbar
 	&-top
-		padding:	40px	0
-		display:	flex
-		align-items:	center
-		justify-content:	space-between
-	&__search
-		margin-right:	auto
-		margin-left:	108px
+		&__content
+			background:	#FFF
+			padding:	40px	0
+			display:	flex
+			align-items:	center
+			justify-content:	space-between
+		&__search
+			margin-right:	auto
+			margin-left:	108px
 
 .logo
+	width:	177px
 	&__img
-
+		width:	100%
 .search
 	position:	relative
 	display:	flex
@@ -38,8 +40,6 @@
 		background:	$primary
 		border:	none
 
-		
-
 .user
 	display:	flex
 	align-items:	center
@@ -49,7 +49,7 @@
 		width:	40px
 		border-radius:	50%
 		overflow:	hidden
-	&__img	
+	&__img
 		width:	155%
 		display:	block
 	&__name
@@ -57,10 +57,13 @@
 		font-size:	14px
 		color:	$text-color
 
-.header-bottom	
-	background-color:	#0A223D
+.menu-burger
+	display:	none
+
+.navbar-bottom
+	background-color:	$dark-blue
 	padding:	31px	0
-.header-menu
+.navbar-menu
 	display:	flex
 	justify-content:	space-between
 	&__item
@@ -70,3 +73,63 @@
 		font-weight:	bold
 		color:	#FFF
 
+//@media	(max-width:	1200px)
+@media	(max-width:	992px)
+	.navbar
+		&-top
+			&__content
+				padding:	30px	0
+			&__search
+				margin-left:	auto
+		&-bottom
+			padding:	22px	0
+		&-menu
+			margin:	0	13.5px
+			&__link
+				font-size:	12px
+
+	.search
+		&__input
+			width:	340px
+	.logo
+		width:	132px
+
+@media	(max-width:	768px)
+	.menu-burger
+		display:	block
+		position:	relative
+		width:	16px
+		height:	11px
+		&__line
+			content:	''
+			background-color:	$text-color
+			position:	absolute
+			width:	100%
+			height:	1px
+			left:	0
+			top:	5px
+		&::before,&::after
+			content:	''
+			background-color:	$text-color
+			position:	absolute
+			width:	100%
+			height:	1px
+			left:	0
+		&::before
+			top:	0
+		&::after
+			bottom:	0
+
+	.search
+		display:	none
+
+	.user
+		display:	none
+
+	.navbar-bottom
+		display:	none
+
+//@media	(max-width:	576px)
+@media	(max-width:	480px)
+	.logo
+		width:	99px
