@@ -45,6 +45,13 @@
 			font-weight: 700
 			font-size: 14px
 			line-height: 18px
+	&-grid
+		display: flex
+		justify-content: space-between
+	&-right
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 
 .swiper-container
 	position: relative
@@ -80,6 +87,74 @@
 			background-image: url(../img/arrow-next.svg)
 	&__img
 		width: 100%
+
+.booking
+	padding: 28px
+	border-radius: 8px
+	width: 100%
+	max-width: 350px
+	min-height: 210px
+	background-color: $dark-blue
+	color: #fff
+	&__info
+		display: flex
+		justify-content: space-between
+		margin-bottom: 9px
+	&__price
+		display: flex
+		flex-direction: column
+		margin-bottom: 9px
+	&__person-room
+	&__call-center
+		margin-bottom: 17px
+	&-button
+		width: 295px
+		height: 45px
+		border-radius: 4px
+		font-size: 14px
+		line-height: 19px
+
+.price
+	&__start
+		font-size: 10px
+		line-height: 14px
+	&__pricetag
+		font-size: 24px
+		line-height: 33px
+		font-weight: 800
+	&__per-room
+		font-size: 12px
+		line-height: 16px
+
+.person-room
+	&__text
+		display: flex
+		justify-content: space-between
+		font-size: 12px
+		line-height: 16px
+		margin-bottom: 8px
+	&__icon
+	&__desc
+		margin-left: 9px
+
+.call-center
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__text
+		font-weight: 600
+		font-size: 18px
+		line-height: 25px
+	&__number
+		display: flex
+		align-items: center
+	&__numb
+		color: #fff
+		font-weight: 600
+		font-size: 18px
+		line-height: 25px
+	&__icon
+		margin-right: 8px
 
 @media	(max-width:	768px)
 	.hotel
