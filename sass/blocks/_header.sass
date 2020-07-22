@@ -1,139 +1,140 @@
 .navbar
 	&-top
-		background-color:	#fff
+		background-color: #fff
 		&__content
-			padding:	40px	0
-			display:	flex
-			align-items:	center
-			justify-content:	space-between
+			padding: 40px	0
+			display: flex
+			align-items: center
+			justify-content: space-between
 		&__search
-			margin-right:	auto
-			margin-left:	108px
+			margin-right: auto
+			margin-left: 108px
 
 .logo
-	width:	177px
+	width: 177px
 	&__img
-		width:	100%
+		width: 100%
 .search
-	position:	relative
-	display:	flex
-	overflow:	hidden
-	height:	40px
-	border-radius:	6px
+	position: relative
+	display: flex
+	overflow: hidden
+	height: 40px
+	border-radius: 6px
 	&__input
-		width:	350px
-		height:	100%
-		padding-left:	23px
-		padding-right:	70px
-		background-color:	#F5FAFE
-		border:	none
-		font-size:	12px
-		line-height:	15px
-		font-size:	12px
-		color:	$text-color
+		width: 350px
+		height: 100%
+		padding-left: 23px
+		padding-right: 70px
+		background-color: #F5FAFE
+		border: none
+		font-size: 12px
+		line-height: 15px
+		font-size: 12px
+		color: $text-color
 	&__button
-		position:	absolute
-		top:	0
-		right:	0
-		height:	100%
-		width:	65px
-		background:	$primary
-		border:	none
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		width: 65px
+		background: $primary
+		border: none
 
 .user
-	display:	flex
-	align-items:	center
+	display: flex
+	align-items: center
 	&__avatar
-		display:	flex
-		justify-content:	center
-		width:	40px
-		border-radius:	50%
-		overflow:	hidden
+		display: flex
+		justify-content: center
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		overflow: hidden
 	&__img
-		width:	155%
-		display:	block
+		width: 155%
+		display: block
 	&__name
-		margin-left:	18px
-		font-size:	14px
-		color:	$text-color
+		margin-left: 18px
+		font-size: 14px
+		color: $text-color
 
 .menu-burger
-	display:	none
+	display: none
 
 .navbar-bottom
-	background-color:	$dark-blue
-	padding:	31px	0
+	background-color: $dark-blue
+	padding: 31px	0
 .navbar-menu
-	display:	flex
-	justify-content:	space-between
+	display: flex
+	justify-content: space-between
 	&__item
 	&__link
-		font-size:	14px
-		text-transform:	uppercase
-		font-weight:	bold
-		color:	#FFF
+		font-size: 14px
+		text-transform: uppercase
+		font-weight: bold
+		color: #FFF
 
 //@media	(max-width:	1200px)
 @media	(max-width:	992px)
 	.navbar
 		&-top
 			&__content
-				padding:	30px	0
+				padding: 30px	0
 			&__search
-				margin-left:	auto
+				margin-left: auto
 		&-bottom
-			padding:	22px	0
+			padding: 22px	0
 		&-menu
-			margin:	0	13.5px
+			margin: 0	13.5px
 			&__link
-				font-size:	12px
+				font-size: 12px
 
 	.search
 		&__input
-			width:	340px
+			width: 340px
 	.logo
-		width:	132px
+		width: 132px
 
 @media	(max-width:	768px)
 	.menu-burger
-		display:	block
-		position:	relative
-		width:	16px
-		height:	11px
+		display: block
+		position: relative
+		width: 16px
+		height: 11px
 		&__line
-			content:	''
-			background-color:	$text-color
-			position:	absolute
-			width:	100%
-			height:	1px
-			left:	0
-			top:	5px
+			content: ''
+			background-color: $text-color
+			position: absolute
+			width: 100%
+			height: 1px
+			left: 0
+			top: 5px
 		&::before,&::after
-			content:	''
-			background-color:	$text-color
-			position:	absolute
-			width:	100%
-			height:	1px
-			left:	0
+			content: ''
+			background-color: $text-color
+			position: absolute
+			width: 100%
+			height: 1px
+			left: 0
 		&::before
-			top:	0
+			top: 0
 		&::after
-			bottom:	0
+			bottom: 0
 
 	.search
-		display:	none
+		display: none
 
 	.user
-		display:	none
+		display: none
 
 	.navbar-bottom
-		display:	none
+		display: none
 
 //@media	(max-width:	576px)
 @media	(max-width:	480px)
 	.navbar
 		&-top
 			&__content
-				padding:	28px	0
+				padding: 28px	0
 	.logo
-		width:	99px
+		width: 99px
