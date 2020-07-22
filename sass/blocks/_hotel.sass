@@ -48,6 +48,7 @@
 	&-grid
 		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
 	&-right
 		display: flex
 		flex-direction: column
@@ -70,6 +71,8 @@
 
 .slider
 	width: 728px
+	height: 450px
+	overflow: hidden
 	&-button
 		position: absolute
 		top: 50%
@@ -86,13 +89,14 @@
 			right: 18px
 			background-image: url(../img/arrow-next.svg)
 	&__img
-		width: 100%
+		min-height: 100%
+		max-width: 100%
+		object-fit: cover
 
 .booking
 	padding: 28px
 	border-radius: 8px
-	width: 100%
-	max-width: 350px
+	width: 350px
 	min-height: 210px
 	background-color: $dark-blue
 	color: #fff
@@ -108,7 +112,7 @@
 	&__call-center
 		margin-bottom: 17px
 	&-button
-		width: 295px
+		width: 100%
 		height: 45px
 		border-radius: 4px
 		font-size: 14px
@@ -156,9 +160,36 @@
 	&__icon
 		margin-right: 8px
 
+.map
+	width: 347px
+	height: 213px
+	border-radius: 10px
+	overflow: hidden
+
+@media	(max-width:	1200px)
+	.slider
+		width: 590px
+
+@media	(max-width:	992px)
+	.slider
+		width: 100%
+	.hotel
+		&__slider
+			margin-bottom: 30px
+		&-right
+			width: 100%
+			flex-direction: row
+			justify-content: space-between
+
+	.booking
+		padding: 22px 22px
+		width: 340px
+	.map
+		width: 340px
+
 @media	(max-width:	768px)
 	.hotel
-		padding: 5px	0	40px
+		padding: 5px 0 40px
 		&-text
 			flex-basis: 100%
 			&__wrap
@@ -173,8 +204,25 @@
 				flex-basis: auto
 		&-rating
 			display: none
+	.slider
+		&__img
+			object-fit: cover
+	.hotel
+		&-right
+			flex-direction: column
+			min-height: 450px
+	.booking
+		width: 100%
+	.map
+		width: 100%
+@media	(max-width:	576px)
+	.slider
+		height: 278px
+	.swiper-container
+		height: 278px
 
 @media	(max-width:	320px)
 	.hotel
 		&-name
 			font-size: 20px
+	.slider

@@ -718,6 +718,8 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .hotel-right {
@@ -754,6 +756,8 @@ template {
 
 .slider {
   width: 728px;
+  height: 450px;
+  overflow: hidden;
 }
 
 .slider-button {
@@ -779,14 +783,16 @@ template {
 }
 
 .slider__img {
-  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .booking {
   padding: 28px;
   border-radius: 8px;
-  width: 100%;
-  max-width: 350px;
+  width: 350px;
   min-height: 210px;
   background-color: #0A223D;
   color: #fff;
@@ -818,7 +824,7 @@ template {
 }
 
 .booking-button {
-  width: 295px;
+  width: 100%;
   height: 45px;
   border-radius: 4px;
   font-size: 14px;
@@ -895,9 +901,48 @@ template {
   margin-right: 8px;
 }
 
+.map {
+  width: 347px;
+  height: 213px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    width: 590px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider {
+    width: 100%;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .booking {
+    padding: 22px 22px;
+    width: 340px;
+  }
+  .map {
+    width: 340px;
+  }
+}
+
 @media (max-width: 768px) {
   .hotel {
-    padding: 5px	0	40px;
+    padding: 5px 0 40px;
   }
   .hotel-text {
     -ms-flex-preferred-size: 100%;
@@ -927,6 +972,32 @@ template {
   }
   .hotel-rating {
     display: none;
+  }
+  .slider__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 450px;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    height: 278px;
+  }
+  .swiper-container {
+    height: 278px;
   }
 }
 
