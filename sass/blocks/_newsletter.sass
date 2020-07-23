@@ -1,0 +1,81 @@
+.newsletter
+	position: relative
+	padding: 98px 0 87px
+	background-image: url("../img/newsletter-bg.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(10, 34, 61, 0.8)
+		opacity: 0.8
+	&-wrapper 
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		max-width: 731px
+		margin: 0 auto
+	&-title
+		font-size: 24px
+		line-height: 30px
+		font-weight: 300
+		color: #ffffff
+		&__strong
+			display: block
+			font-size: 36px
+			line-height: 45px
+			text-transform: uppercase
+
+.subscribe 
+	position: relative
+	width: 350px
+	height: 45px
+	border-radius: 4px
+	overflow: hidden
+	color: #BDBDBD
+	&__input 
+		position: absolute
+		width: 100%
+		height: 100%
+		padding-left: 33px	
+		padding-right: 75px	
+		font-size: 14px
+		font-weight: 300
+	&__button
+		position: absolute
+		right: 0
+		top: 0
+		height: 100%
+		padding: 0 18px
+		font-size: 12px
+		font-weight: 600
+
+@media	(max-width:	992px)
+	.newsletter
+		&-wrapper
+			max-width: 700px
+@media	(max-width:	768px)
+	.newsletter
+		&-wrapper
+			max-width: 576px
+			width: 92%
+			flex-direction: column
+			align-items: start
+		&-title
+			&__strong 
+				margin-bottom: 30px
+@media	(max-width:	480px)
+	.newsletter
+		padding: 76px 0 83px
+	.subscribe 
+		width: 280px
+		&__input 
+			padding-left: 20px
+
