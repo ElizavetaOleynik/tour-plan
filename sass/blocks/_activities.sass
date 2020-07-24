@@ -1,0 +1,81 @@
+.activities
+	padding: 60px 0 100px
+	&__title
+		margin-bottom: 57px
+		font-weight: 700
+		font-size: 24px
+		line-height: 30px
+		color: #000
+		text-transform: uppercase
+	
+.activities-block
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	&__item
+		flex-basis: 23%
+		margin-bottom: 20px
+		
+
+.activities-card
+	position: relative
+	height: 255px
+	overflow: hidden
+	border-radius: 6px
+	&__bg
+		position: absolute
+		top: 0
+		bottom: 0
+		z-index: -10
+		overflow: hidden
+		&::before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%)
+			opacity: 0.8
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__text
+		position: absolute
+		max-width: 200px
+		bottom: 24px
+		left: 26px
+	&__title
+		margin-bottom: 18px
+		font-weight: 700
+		font-size: 16px
+		line-height: 20px
+		color: #FFFFFF
+	&__button
+		padding: 7px 22px
+		border-radius: 4px
+		font-family: Nunito, sans-serif
+		font-weight: 600
+		font-size: 12px
+		line-height: 16px
+
+@media	(max-width:	1200px)
+	.activities
+		padding: 60px 0 50px
+	.activities-block
+		&__item
+			flex-basis: 49%
+
+@media	(max-width:	576px)
+	.activities
+		padding: 40px 0 40px
+		&__title
+			margin-bottom: 36px
+			font-size: 18px
+			line-height: 23px
+	.activities-block
+		&__item
+			flex-basis: 100%
