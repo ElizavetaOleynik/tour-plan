@@ -105,25 +105,23 @@
 				<!-- /.hotel-rating -->
 			</div>
 			<div class="hotel-grid">
-				<div class="slider hotel__slider">
-					<!-- Slider main container -->
-					<div class="swiper-container">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper">
-							<!-- Slides -->
-							<div class="swiper-slide"><img class="slider__img" src="img/slide.jpg" alt="slide"></div>
-							<div class="swiper-slide"><img class="slider__img" src="img/slide-1.jpg" alt="slide"></div>
-							<div class="swiper-slide"><img class="slider__img" src="img/slide-2.jpg" alt="slide"></div>
-							<div class="swiper-slide"><img class="slider__img" src="img/slide-3.jpg" alt="slide"></div>
-							<div class="swiper-slide"><img class="slider__img" src="img/slide-4.jpg" alt="slide"></div>
-						</div>
-						<!-- If we need navigation buttons -->
-						<button class="slider-button slider-button--prev"></button>
-						<button class="slider-button slider-button--next"></button>
+
+				<!-- Slider main container -->
+				<div class="swiper-container hotel-slider hotel__slider">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide"><img class="hotel-slider__img" src="img/slide.jpg" alt="slide"></div>
+						<div class="swiper-slide"><img class="hotel-slider__img" src="img/slide-1.jpg" alt="slide"></div>
+						<div class="swiper-slide"><img class="hotel-slider__img" src="img/slide-2.jpg" alt="slide"></div>
+						<div class="swiper-slide"><img class="hotel-slider__img" src="img/slide-3.jpg" alt="slide"></div>
+						<div class="swiper-slide"><img class="hotel-slider__img" src="img/slide-4.jpg" alt="slide"></div>
 					</div>
-					<!-- Slider main container -->
+					<!-- If we need navigation buttons -->
+					<div class="hotel-slider__button hotel-slider__button--prev"></div>
+					<div class="hotel-slider__button hotel-slider__button--next"></div>
 				</div>
-				<!-- /.slider -->
+
 				<div class="hotel-right">
 					<div class="booking">
 						<div class="booking__info">
@@ -167,6 +165,7 @@
 		<!-- /.container -->
 	</section>
 	<!-- /.hotel -->
+
 	<section class="newsletter parallax-window" data-parallax="scroll" data-image-src="img/newsletter-bg.jpg">
 		<div class="newsletter-wrapper">
 			<h2 class="newsletter-title">
@@ -183,6 +182,58 @@
 		<!-- /.newsletter-wrapper -->
 	</section>
 	<!-- /.newsletter -->
+
+	<section class="reviews">
+		<div class="container">
+			<div class="reviews-container">
+				<h2 class="reviews__title">What people thinks about us</h2>
+
+				<!-- Slider main container -->
+				<div class="swiper-container reviews-slider reviews__slider">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<div class="reviews-slider__item">
+								<div class="reviews-slider__profile">
+									<div class="reviews-slider__avatar"><img class="reviews-slider__img" src="img/review-avatar.jpg"
+											alt="Megan Fox">
+									</div>
+									<h3 class="reviews-slider__username">Megan Fox</h3>
+									<span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
+									<div class="reviews-slider__rating">
+										<img src="img/Star.svg" alt="">
+										<img src="img/Star.svg" alt="">
+										<img src="img/Star.svg" alt="">
+										<img src="img/Star.svg" alt="">
+										<img src="img/Star.svg" alt="">
+									</div>
+									<p class="reviews-slider__text">It was very nice hotel with cleanliness. Staff behavior was good and
+										polite. They welcome us very well. Issue was only that Lift was not in working and we were allotted
+										to
+										3rd floor and amenities articles were in corner of gallery which were giving bad feeling. Breakfast
+										was
+										good and support of the staff was also very nice. Location is not good as per atmosphere, it is very
+										nearby most of the popular places but self location in a narrow street is not good. Overall it was a
+										good experience and could recommend.
+									</p>
+								</div>
+							</div>
+							<!-- /.reviews-slider__item -->
+						</div>
+					</div>
+					<!-- If we need navigation buttons -->
+					<div class="reviews-slider__button reviews-slider__button--prev"></div>
+					<div class="reviews-slider__button reviews-slider__button--next"></div>
+				</div>
+			</div>
+			<!-- /.reviews-container -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.reviews -->
+
+
 	<script src="js/swiper-bundle.min.js"></script>
 	<!--Подключение слайдера-->
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=9313937c-2bc8-480f-b9ac-7970f5ed1c87&lang=en_US">
