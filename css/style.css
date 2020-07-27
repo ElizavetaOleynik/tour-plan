@@ -1434,7 +1434,16 @@ template {
 }
 
 .packages {
-  margin-bottom: 100px;
+  padding: 40px 0 70px;
+}
+
+.packages__title {
+  margin-bottom: 65px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .packages-cards {
@@ -1453,56 +1462,6 @@ template {
       grid-column-start: span 2;
 }
 
-.biggest-card {
-  position: relative;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.biggest-card__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.biggest-card__img {
-  max-height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.biggest-card__info {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  width: 50%;
-  height: 100%;
-  padding: 46px 21px 30px 43px;
-  background-color: #0A223D;
-}
-
-.biggest-card__rating {
-  margin-bottom: 5px;
-}
-
-.biggest-card__title {
-  margin-bottom: 27px;
-}
-
-.biggest-card__text {
-  margin-bottom: 24px;
-}
-
-.biggest-card__features {
-  margin-bottom: 37px;
-}
-
 .package-card {
   position: relative;
   width: 100%;
@@ -1517,12 +1476,12 @@ template {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   overflow: hidden;
 }
 
 .package-card__img {
-  max-height: 100%;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1563,6 +1522,57 @@ template {
   margin-bottom: 24px;
 }
 
+.package-card:first-child {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.package-card:first-child .package-card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.package-card:first-child .package-card__img {
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.package-card:first-child .package-card__info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  z-index: 10;
+  width: 50%;
+  height: 100%;
+  padding: 46px 21px 30px 43px;
+  background-color: #0A223D;
+}
+
+.package-card:first-child .package-card__rating {
+  margin-bottom: 5px;
+}
+
+.package-card:first-child .package-card__title {
+  margin-bottom: 27px;
+}
+
+.package-card:first-child .package-card__text {
+  margin-bottom: 24px;
+}
+
+.package-card:first-child .package-card__features {
+  margin-bottom: 37px;
+}
+
 .package-features {
   max-width: 100%;
   font-size: 12px;
@@ -1591,6 +1601,8 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .package-book__old-price {
@@ -1632,32 +1644,34 @@ template {
   .package-card {
     height: 500px;
   }
-  .biggest-card__bg {
+  .package-card:first-child .package-card__bg {
+    height: 50%;
     width: 100%;
   }
-  .biggest-card__info {
+  .package-card:first-child .package-card__info {
+    left: 0;
     width: 100%;
     height: 53%;
     padding: 30px 21px 25px 32px;
   }
-  .biggest-card__rating {
+  .package-card:first-child .package-card__rating {
     display: none;
   }
-  .biggest-card__title {
+  .package-card:first-child .package-card__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 23px;
   }
-  .biggest-card__text {
+  .package-card:first-child .package-card__text {
     display: none;
   }
-  .biggest-card__title {
+  .package-card:first-child .package-card__title {
     margin-bottom: 23px;
   }
-  .biggest-card__text {
+  .package-card:first-child .package-card__text {
     margin-bottom: 24px;
   }
-  .biggest-card__features {
+  .package-card:first-child .package-card__features {
     margin-bottom: 24px;
   }
 }
@@ -1673,13 +1687,16 @@ template {
     -ms-grid-columns: (100%)[1];
         grid-template-columns: repeat(1, 100%);
   }
+  .package-card {
+    height: 500px;
+  }
 }
 
 @media (max-width: 480px) {
-  .biggest-card__info {
+  .package-card__info {
     padding: 20px;
   }
-  .package-card__info {
+  .package-card:first-child .package-card__info {
     padding: 20px;
   }
 }

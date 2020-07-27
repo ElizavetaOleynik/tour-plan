@@ -1,6 +1,12 @@
 .packages
-	margin-bottom: 100px
-	
+	padding: 40px 0 70px
+	&__title
+		margin-bottom: 65px
+		font-weight: 700
+		font-size: 36px
+		line-height: 45px
+		text-align: center
+		text-transform: uppercase
 .packages-cards
 	display: grid
 	grid-template-columns: repeat(3, 32%)
@@ -9,41 +15,7 @@
 	&__item
 		&:first-child
 			grid-column-start: span 2
-
-.biggest-card
-	position: relative
-	width: 100%
-	border-radius: 8px
-	overflow: hidden
-	&__bg
-		position: absolute
-		top: 0
-		left: 0
-		width: 50%
-		height: 100%
-		overflow: hidden
-	&__img
-		max-height: 100%
-		width: 100%
-		object-fit: cover
-	&__info
-		position: absolute
-		bottom: 0
-		right: 0
-		z-index: 10
-		width: 50%
-		height: 100%
-		padding: 46px 21px 30px 43px
-		background-color: $dark-blue
-	&__rating
-		margin-bottom: 5px
-	&__title
-		margin-bottom: 27px
-	&__text
-		margin-bottom: 24px
-	&__features
-		margin-bottom: 37px
-	&__book
+			
 
 .package-card
 	position: relative
@@ -57,10 +29,10 @@
 		top: 0
 		left: 0
 		width: 100%
-		height: 100%
+		height: 50%
 		overflow: hidden
 	&__img
-		max-height: 100%
+		height: 100%
 		width: 100%
 		object-fit: cover
 	&__info
@@ -86,7 +58,41 @@
 		margin-bottom: 24px
 	&__features
 		margin-bottom: 24px
-		
+	&:first-child
+		position: relative
+		width: 100%
+		border-radius: 8px
+		overflow: hidden
+		.package-card__bg
+			position: absolute
+			top: 0
+			left: 0
+			width: 50%
+			height: 100%
+			overflow: hidden
+		.package-card__img
+			max-height: 100%
+			width: 100%
+			object-fit: cover
+		.package-card__info
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 50%
+			z-index: 10
+			width: 50%
+			height: 100%
+			padding: 46px 21px 30px 43px
+			background-color: $dark-blue
+		.package-card__rating
+			margin-bottom: 5px
+		.package-card__title
+			margin-bottom: 27px
+		.package-card__text
+			margin-bottom: 24px
+		.package-card__features
+			margin-bottom: 37px
+
 		
 .package-features
 	max-width: 100%
@@ -104,6 +110,7 @@
 	display: flex
 	align-items: flex-end
 	justify-content: space-between
+	flex-wrap: wrap
 	&__price
 	&__old-price
 		font-size: 14px
@@ -133,29 +140,32 @@
 		&__item
 			&:first-child
 				grid-column-start: span 1
+
 	.package-card
 		height: 500px
-	.biggest-card
-		&__bg
-			width: 100%
-		&__info
-			width: 100%
-			height: 53%
-			padding: 30px 21px 25px 32px
-		&__rating
-			display: none
-		&__title
-			font-weight: 700
-			font-size: 18px
-			line-height: 23px
-		&__text
-			display: none
-		&__title
-			margin-bottom: 23px
-		&__text
-			margin-bottom: 24px
-		&__features
-			margin-bottom: 24px
+		&:first-child
+			.package-card__bg
+				height: 50%
+				width: 100%
+			.package-card__info
+				left: 0
+				width: 100%
+				height: 53%
+				padding: 30px 21px 25px 32px
+			.package-card__rating
+				display: none
+			.package-card__title
+				font-weight: 700
+				font-size: 18px
+				line-height: 23px
+			.package-card__text
+				display: none
+			.package-card__title
+				margin-bottom: 23px
+			.package-card__text
+				margin-bottom: 24px
+			.package-card__features
+				margin-bottom: 24px
 
 @media ( max-width: 768px )
 	.package-card
@@ -164,10 +174,15 @@
 @media	(max-width:	680px)
 	.packages-cards
 		grid-template-columns: repeat(1, 100%)
+	.package-card
+		height: 500px
+
 @media	(max-width:	480px)
-	.biggest-card
-		&__info
-			padding: 20px
 	.package-card
 		&__info
 			padding: 20px
+		&:first-child
+			.package-card__info
+				padding: 20px
+
+			
