@@ -1432,4 +1432,255 @@ template {
         flex-basis: 100%;
   }
 }
+
+.packages {
+  margin-bottom: 100px;
+}
+
+.packages-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (32%)[3];
+      grid-template-columns: repeat(3, 32%);
+  grid-row-gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.packages-cards__item:first-child {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+.biggest-card {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.biggest-card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.biggest-card__img {
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.biggest-card__info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 50%;
+  height: 100%;
+  padding: 46px 21px 30px 43px;
+  background-color: #0A223D;
+}
+
+.biggest-card__rating {
+  margin-bottom: 5px;
+}
+
+.biggest-card__title {
+  margin-bottom: 27px;
+}
+
+.biggest-card__text {
+  margin-bottom: 24px;
+}
+
+.biggest-card__features {
+  margin-bottom: 37px;
+}
+
+.package-card {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.package-card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.package-card__img {
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.package-card__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 53%;
+  width: 100%;
+  padding: 30px 21px 25px 32px;
+  background-color: #0A223D;
+}
+
+.package-card__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.package-card__text {
+  font-size: 14px;
+  line-height: 160.6%;
+}
+
+.package-card__title {
+  margin-bottom: 23px;
+}
+
+.package-card__text {
+  margin-bottom: 24px;
+}
+
+.package-card__features {
+  margin-bottom: 24px;
+}
+
+.package-features {
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.package-features__text {
+  margin-bottom: 11px;
+}
+
+.package-features__text:last-child {
+  margin-bottom: 0;
+}
+
+.package-features__icon {
+  margin-right: 14px;
+}
+
+.package-book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.package-book__old-price {
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.package-book__new-price {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.package-book__button {
+  font-size: 14px;
+  padding: 10px 26px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .package-card {
+    height: 520px;
+  }
+}
+
+@media (max-width: 992px) {
+  .packages-cards {
+    -ms-grid-columns: (48%)[2];
+        grid-template-columns: repeat(2, 48%);
+  }
+  .packages-cards__item:first-child {
+    -ms-grid-column: span 1;
+        grid-column-start: span 1;
+  }
+  .package-card {
+    height: 500px;
+  }
+  .biggest-card__bg {
+    width: 100%;
+  }
+  .biggest-card__info {
+    width: 100%;
+    height: 53%;
+    padding: 30px 21px 25px 32px;
+  }
+  .biggest-card__rating {
+    display: none;
+  }
+  .biggest-card__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .biggest-card__text {
+    display: none;
+  }
+  .biggest-card__title {
+    margin-bottom: 23px;
+  }
+  .biggest-card__text {
+    margin-bottom: 24px;
+  }
+  .biggest-card__features {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .package-card {
+    height: 520px;
+  }
+}
+
+@media (max-width: 680px) {
+  .packages-cards {
+    -ms-grid-columns: (100%)[1];
+        grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .biggest-card__info {
+    padding: 20px;
+  }
+  .package-card__info {
+    padding: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

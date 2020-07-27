@@ -1,0 +1,173 @@
+.packages
+	margin-bottom: 100px
+	
+.packages-cards
+	display: grid
+	grid-template-columns: repeat(3, 32%)
+	grid-row-gap: 30px
+	justify-content: space-between
+	&__item
+		&:first-child
+			grid-column-start: span 2
+
+.biggest-card
+	position: relative
+	width: 100%
+	border-radius: 8px
+	overflow: hidden
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 50%
+		height: 100%
+		overflow: hidden
+	&__img
+		max-height: 100%
+		width: 100%
+		object-fit: cover
+	&__info
+		position: absolute
+		bottom: 0
+		right: 0
+		z-index: 10
+		width: 50%
+		height: 100%
+		padding: 46px 21px 30px 43px
+		background-color: $dark-blue
+	&__rating
+		margin-bottom: 5px
+	&__title
+		margin-bottom: 27px
+	&__text
+		margin-bottom: 24px
+	&__features
+		margin-bottom: 37px
+	&__book
+
+.package-card
+	position: relative
+	width: 100%
+	height: 500px
+	border-radius: 8px
+	overflow: hidden
+	color: #fff
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		overflow: hidden
+	&__img
+		max-height: 100%
+		width: 100%
+		object-fit: cover
+	&__info
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 10
+		height: 53%
+		width: 100%
+		padding: 30px 21px 25px 32px
+		background-color: $dark-blue
+	&__title
+		font-weight: 700
+		font-size: 18px
+		line-height: 23px
+	&__text
+		font-size: 14px
+		line-height: 160.6%
+	&__title
+		margin-bottom: 23px
+	&__text
+		margin-bottom: 24px
+	&__features
+		margin-bottom: 24px
+		
+		
+.package-features
+	max-width: 100%
+	font-size: 12px
+	line-height: 15px
+	&__text
+		margin-bottom: 11px
+		&:last-child
+			margin-bottom: 0
+	&__icon
+		margin-right: 14px
+	&__desc
+	
+.package-book
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+	&__price
+	&__old-price
+		font-size: 14px
+		line-height: 18px
+		text-decoration-line: line-through
+	&__new-price
+		display: block
+		margin-top: 10px
+		font-weight: 700
+		font-size: 24px
+		line-height: 30px
+	&__button
+		font-size: 14px
+		padding: 10px 26px
+		border-radius: 4px
+		
+
+
+
+@media ( max-width: 1200px )
+	.package-card
+		height: 520px
+
+@media ( max-width: 992px )
+	.packages-cards
+		grid-template-columns: repeat(2, 48%)
+		&__item
+			&:first-child
+				grid-column-start: span 1
+	.package-card
+		height: 500px
+	.biggest-card
+		&__bg
+			width: 100%
+		&__info
+			width: 100%
+			height: 53%
+			padding: 30px 21px 25px 32px
+		&__rating
+			display: none
+		&__title
+			font-weight: 700
+			font-size: 18px
+			line-height: 23px
+		&__text
+			display: none
+		&__title
+			margin-bottom: 23px
+		&__text
+			margin-bottom: 24px
+		&__features
+			margin-bottom: 24px
+
+@media ( max-width: 768px )
+	.package-card
+		height: 520px
+
+@media	(max-width:	680px)
+	.packages-cards
+		grid-template-columns: repeat(1, 100%)
+@media	(max-width:	480px)
+	.biggest-card
+		&__info
+			padding: 20px
+	.package-card
+		&__info
+			padding: 20px
