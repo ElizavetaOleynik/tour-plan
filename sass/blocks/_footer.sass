@@ -12,7 +12,7 @@
 		width: 166px
 		grid-row: 1 / 2
 		align-self: stretch
-	&__catigories
+	&__categories
 		grid-row: 1 / 4
 	&__social
 		&-links
@@ -22,8 +22,7 @@
 			justify-content: space-between
 		&-network
 			display: flex
-			align-content: start
-			align-items: center
+			align-items: start
 			grid-row: 2 / 4
 			grid-column: span 2
 	&__contact
@@ -40,7 +39,7 @@
 	&__title
 		margin-bottom: 16px
 		font-size: 18px
-		line-height: 13px
+		line-height: 23px
 		text-transform: uppercase
 		font-weight: 700
 		&--inline
@@ -80,6 +79,8 @@
 		border: none
 		flex-basis: 100%
 		margin-bottom: 23px
+		height: 123px
+		resize: none
 	&__button
 		min-width: 160px
 		min-height: 50px
@@ -91,4 +92,126 @@
 		font-weight: 700
 		font-size: 12px
 		line-height: 15px
-		color: #BDBDBD
+		color: #E0E0E0
+
+.footer-bottom
+	&__wrapper
+		padding-top: 95px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		flex-wrap: wrap
+	&__links
+		display: flex
+		flex-wrap: wrap
+		flex-basis: 277px
+		justify-content: space-between
+		margin-right: 277px
+	&__link
+		color: #fff
+		font-size: 12px
+		line-height: 40px
+	&__credit-cards
+		max-width: 136px
+	&__img
+		width: 100%
+
+@media	( max-width: 1200px )
+	.footer
+		&__input
+			flex-basis: 100%
+
+	.footer-bottom
+		&__wrapper
+			justify-content: space-between
+		&__links
+			margin-right: 20px
+
+@media	( max-width: 992px )
+	.footer
+		&__input
+			flex-basis: 49%
+		&-wrapper
+			grid-template-columns: repeat(6, 1fr)
+			grid-row-gap: 40px
+		&__logo
+			grid-row: 1 / 2
+			grid-column: span 2
+		&__social
+			&-network
+				grid-row: 1 / 2
+				grid-column: span 4
+				align-self: center
+		&__categories
+			grid-row: 2 / 3
+			grid-column: span 2
+		&__legal
+			grid-column: span 2
+		&__additional
+			grid-column: span 2
+		&__contact
+			&-details
+				grid-column: span 5
+				grid-row: 3
+			&-form
+				grid-column: span 5
+				grid-row: 4
+
+@media	( max-width: 768px )
+	.footer
+		&__input
+			flex-basis: 100%
+
+@media	( max-width: 576px )
+	.footer
+		&-wrapper
+			grid-template-columns: 1fr
+		&__logo
+			grid-row: 1
+			grid-column: 1
+		&__social
+			&-network
+				max-width: 90%
+				grid-row: 2
+				grid-column: 1
+		&__additional
+			max-width: 90%
+			grid-row: 3
+			grid-column: 1
+		&__categories
+			max-width: 90%
+			grid-row: 4
+			grid-column: 1
+		&__legal
+			max-width: 90%
+			grid-row: 5
+			grid-column: 1
+		&__contact
+			&-details
+				max-width: 90%
+				grid-row: 6
+				grid-column: 1
+		&__contact
+			&-form
+				max-width: 90%
+				grid-row: 7
+				grid-column: 1
+
+@media	( max-width: 480px	)
+	.footer
+		&__info
+			flex-basis: 90%
+			margin-bottom: 15px
+		&__button
+			order: 1
+	.footer-bottom
+		width: 90%
+		&__links
+			flex-basis: 100%
+
+@media	( max-width:400px)
+	.footer-bottom
+		&__wrapper
+			padding-top: 40px
+		&__link
+			flex-basis: 100%
