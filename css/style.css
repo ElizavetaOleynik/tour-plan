@@ -2054,7 +2054,7 @@ template {
     grid-column: 1;
   }
   .footer__contact-form {
-    max-width: 90%;
+    max-width: 88%;
     -ms-grid-row: 7;
     grid-row: 7;
     -ms-grid-column: 1;
