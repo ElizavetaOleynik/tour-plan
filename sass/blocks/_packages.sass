@@ -71,8 +71,9 @@
 			height: 100%
 			overflow: hidden
 		.package-card__img
-			max-height: 100%
+			height: 100%
 			width: 100%
+			object-fit: cover
 			object-fit: cover
 		.package-card__info
 			position: absolute
@@ -135,8 +136,11 @@
 		height: 520px
 
 @media ( max-width: 992px )
+	.packages
+		padding: 40px 0 60px
 	.packages-cards
 		grid-template-columns: repeat(2, 48%)
+		grid-row-gap: 20px
 		&__item
 			&:first-child
 				grid-column-start: span 1
@@ -168,6 +172,11 @@
 				margin-bottom: 24px
 
 @media ( max-width: 768px )
+	.packages
+		padding: 40px 0 36px
+		&__title
+			font-size: 30px
+			margin-bottom: 30px
 	.package-card
 		height: 520px
 
@@ -176,6 +185,12 @@
 		grid-template-columns: repeat(1, 100%)
 	.package-card
 		height: 500px
+
+@media	(max-width:	576px)
+	.packages
+		&__title
+			font-size: 18px
+			margin-bottom: 20px
 
 @media	(max-width:	480px)
 	.package-card
