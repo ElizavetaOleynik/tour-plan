@@ -159,11 +159,15 @@
 
 @media	( max-width: 768px )
 	.footer
+		padding: 73px 0 33px
 		&__input
 			flex-basis: 100%
+		&__logo
+			width: 104px
 
 @media	( max-width: 576px )
 	.footer
+		padding: 69px 0 21px
 		&-wrapper
 			grid-template-columns: 1fr
 		&__logo
@@ -174,15 +178,15 @@
 				max-width: 90%
 				grid-row: 2
 				grid-column: 1
-		&__additional
+		&__legal
 			max-width: 90%
 			grid-row: 3
 			grid-column: 1
-		&__categories
+		&__additional
 			max-width: 90%
 			grid-row: 4
 			grid-column: 1
-		&__legal
+		&__categories
 			max-width: 90%
 			grid-row: 5
 			grid-column: 1
@@ -193,7 +197,7 @@
 				grid-column: 1
 		&__contact
 			&-form
-				max-width: 88%
+				max-width: 85%
 				grid-row: 7
 				grid-column: 1
 
@@ -210,6 +214,15 @@
 			flex-basis: 100%
 
 @media	( max-width:400px)
+	.footer
+		&__social
+			&-network
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				min-height: 67px
+			&-links
+
 	.footer-bottom
 		&__wrapper
 			padding-top: 40px
