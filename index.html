@@ -116,7 +116,7 @@
 					<p class="hotel-text__desc">Half-Board / All Inclusive + Complimentary Activities + Child Stays Free
 					</p>
 				</div>
-				<div class="hotel-rating">
+				<div class="hotel-rating" data-toggle="modal" data-href="#rating-modal">
 					<span class="hotel-rating__text">User Rattings</span>
 					<span class="hotel-rating__evaluation">4.5/5</span>
 				</div>
@@ -169,7 +169,9 @@
 							</a>
 						</div>
 						<!-- /.booking__call-center -->
-						<button class="button booking-button">View Other Options</button>
+						<button class="button booking-button" data-toggle="modal" data-href="#booking-modal">
+							View Other Options
+						</button>
 						<!-- /.booking__info -->
 					</div>
 					<!-- /.booking -->
@@ -571,9 +573,9 @@
 					<form action="send.php" method="POST" class="footer__form">
 						<input class="input footer__input" type="text" placeholder="Your Full Name*" name="name">
 						<input class="input footer__input" type="text" placeholder="Phone Number*" name="phone">
-						<textarea class="footer__message" placeholder="Message" name="message"></textarea>
+						<textarea class="footer__message message" placeholder="Message" name="message"></textarea>
 						<!-- /#.footer__message -->
-						<button class="footer__button button" type="submit">Send</button>
+						<button class="footer__button button form-button" type="submit">Send</button>
 						<!-- /.footer__button button -->
 						<span class="footer__info">* Required Fields</span>
 					</form>
@@ -598,14 +600,53 @@
 		<!-- /.container -->
 	</footer>
 	<!-- /.footer -->
-	<div class="modal">
+
+	<div class="modal" id="booking-modal">
 		<div class="modal__overlay"></div>
 		<!-- /.modal__overlay -->
 		<div class="modal__dialog">
 			<a href="" class="modal__close">
 				<img src="img/close.svg" alt="Icon: close">
 			</a>
-			<!-- /.modal__close -->
+			<h3 class="modal__title">Booking</h3>
+			<!-- /.modal__title -->
+			<form action="send.php" method="POST" class="modal__form">
+				<input class="input modal__input" type="text" placeholder="Your Full Name*" name="name">
+				<input class="input modal__input" type="text" placeholder="Phone Number*" name="phone">
+				<input class="input modal__input" type="text" placeholder="Email*" name="phone">
+				<textarea class="modal__message message" placeholder="Message" name="message"></textarea>
+				<!-- /#.modal__message -->
+				<div class="modal__button-wrap">
+					<button class="modal__button button form-button" type="submit">Send</button>
+					<!-- /.modal__button button -->
+					<span class="modal__info">* Required Fields</span>
+				</div>
+			</form>
+		</div>
+		<!-- /.modal__dialog -->
+	</div>
+	<!-- /.modal -->
+	<div class="modal" id="rating-modal">
+		<div class="modal__overlay"></div>
+		<!-- /.modal__overlay -->
+		<div class="modal__dialog">
+			<a href="" class="modal__close">
+				<img src="img/close.svg" alt="Icon: close">
+			</a>
+			<h3 class="modal__title">Send us a feedback</h3>
+			<!-- /.modal__title -->
+			<form action="send.php" method="POST" class="modal__form">
+				<input class="input modal__input" type="text" placeholder="Your Full Name*" name="name">
+				<input class="input modal__input" type="text" placeholder="Phone Number*" name="phone">
+				<input class="input modal__input" type="text" placeholder="Email*" name="phone">
+				<textarea class="modal__message message" placeholder="Message" name="message"></textarea>
+				<!-- /#.modal__message -->
+				<div class="modal__button-wrap">
+					<button class="modal__button button form-button" type="submit">Send</button>
+					<!-- /.modal__button button -->
+					<span class="modal__info">* Required Fields</span>
+				</div>
+			</form>
 		</div>
 		<!-- /.modal__dialog -->
 	</div>
