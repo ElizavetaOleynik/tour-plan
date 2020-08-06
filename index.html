@@ -366,10 +366,8 @@
 				<span class="newsletter-title__strong">Newsletter</span>
 			</h2>
 			<form class="subscribe newsletter__subscribe" action="send.php" method="POST">
-				<input class="subscribe__input" type="text" placeholder="Your email address" name="email">
-				<button class="subscribe__button button">
-					send
-				</button>
+				<input class="subscribe__input" type="email" placeholder="Email*" name="email" required>
+				<button class="subscribe__button button">send</button>
 			</form>
 		</div>
 		<!-- /.newsletter-wrapper -->
@@ -570,9 +568,16 @@
 
 				<div class="footer__contact-form">
 					<h3 class="footer__title">Send us a message</h3>
-					<form action="send.php" method="POST" class="footer__form">
-						<input class="input footer__input" type="text" placeholder="Your Full Name*" name="name">
-						<input class="input footer__input" type="text" placeholder="Phone Number*" name="phone">
+					<form action="send.php" method="POST" class="footer__form form">
+						<div class="footer__input-group">
+							<input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required>
+						</div>
+						<!-- /.footer__input-group -->
+						<div class="footer__input-group">
+							<input class="input footer__input phone" type="tel" placeholder="Phone Number*" name="phone" required>
+						</div>
+						<!-- /.footer__input-group -->
+
 						<textarea class="footer__message message" placeholder="Message" name="message"></textarea>
 						<!-- /#.footer__message -->
 						<button class="footer__button button form-button" type="submit">Send</button>
@@ -610,10 +615,10 @@
 			</a>
 			<h3 class="modal__title">Booking</h3>
 			<!-- /.modal__title -->
-			<form action="send.php" method="POST" class="modal__form">
-				<input class="input modal__input" type="text" placeholder="Your Full Name*" name="name">
-				<input class="input modal__input" type="text" placeholder="Phone Number*" name="phone">
-				<input class="input modal__input" type="text" placeholder="Email*" name="phone">
+			<form action="send.php" method="POST" class="modal__form form">
+				<input class="input modal__input" type="text" placeholder="Your Full Name*" name="name" required minlength="2">
+				<input class="input modal__input phone" type="tel" placeholder="Phone Number*" name="phone" required>
+				<input class="input modal__input" type="email" placeholder="Email*" name="email" required>
 				<textarea class="modal__message message" placeholder="Message" name="message"></textarea>
 				<!-- /#.modal__message -->
 				<div class="modal__button-wrap">
@@ -635,10 +640,10 @@
 			</a>
 			<h3 class="modal__title">Send us a feedback</h3>
 			<!-- /.modal__title -->
-			<form action="send.php" method="POST" class="modal__form">
-				<input class="input modal__input" type="text" placeholder="Your Full Name*" name="name">
-				<input class="input modal__input" type="text" placeholder="Phone Number*" name="phone">
-				<input class="input modal__input" type="text" placeholder="Email*" name="phone">
+			<form action="send.php" method="POST" class="modal__form form">
+				<input class="input modal__input" type="text" placeholder="Your Full Name*" name="name" required>
+				<input class="input modal__input phone" type="tel" placeholder="Phone Number*" name="phone" required>
+				<input class="input modal__input" type="email" placeholder="Email*" name="email" required>
 				<textarea class="modal__message message" placeholder="Message" name="message"></textarea>
 				<!-- /#.modal__message -->
 				<div class="modal__button-wrap">
@@ -664,6 +669,8 @@
 	<script src="js/parallax.min.js"></script>
 	<script src="js/parallax.js"></script>
 	<!--Параллакс эффект-->
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

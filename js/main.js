@@ -66,7 +66,36 @@ $(document).ready(function () {
 		}
 	});
 
+	// обработка форм
+	$(".form").each(function () {
+		$(this).validate({
+			errorClass: "invalid",
+			messages: {
+				name: {
+					required: "Put your name",
+					minlength: "Your name must be at least two letters",
+				},
+				email: {
+					required: "Put your email",
+					email: "Your email address must be in the format of name@domain.com"
+				},
+				phone: {
+					required: "Your phone is required"
+				},
+			}
+		});
+	});
 
+	$(".subscribe").validate({
+		errorClass: "subscribe__invalid",
+		email: {
+			required: "Put your email",
+			email: "Your email address must be in the format of name@domain.com"
+		}
+	});
 
+	$(document).ready(function () {
+		$('.phone').mask('+7 (000) 00-00-00');
+	});
 
 });

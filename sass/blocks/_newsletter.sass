@@ -14,6 +14,7 @@
 		height: 100%
 		background-color: rgba(10, 34, 61, 0.8)
 		opacity: 0.8
+		z-index: 0
 	&-wrapper
 		position: relative
 		display: flex
@@ -39,8 +40,6 @@
 	position: relative
 	width: 350px
 	height: 45px
-	border-radius: 4px
-	overflow: hidden
 	color: #BDBDBD
 	&__input
 		position: absolute
@@ -50,6 +49,9 @@
 		padding-right: 75px
 		font-size: 14px
 		font-weight: 300
+		z-index: 1
+		border-radius: 4px
+		border: none
 	&__button
 		position: absolute
 		right: 0
@@ -58,6 +60,12 @@
 		padding: 0 18px
 		font-size: 12px
 		font-weight: 600
+		z-index: 1
+		border-radius: 0 4px 4px 0
+	&__invalid
+		position: relative
+		color: $primary
+		border-bottom: 1px solid $primary
 
 @media	(max-width:	992px)
 	.newsletter

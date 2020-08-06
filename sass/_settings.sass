@@ -27,10 +27,11 @@ ul
 
 button
 	outline: none
-	background: none
 	border: none
 	margin: 0
 	padding: 0
+	background: $primary
+	color: #fff
 	&:hover
 		cursor: pointer
 
@@ -51,10 +52,6 @@ form,	input
 	border: none
 	resize: none
 
-.button
-	background: $primary
-	color: #fff
-
 .form-button
 	min-width: 160px
 	min-height: 50px
@@ -66,6 +63,10 @@ form,	input
 .container
 	max-width: 1110px
 	margin: 0	auto
+
+.invalid
+	color: $primary
+	border-bottom: 1px solid $primary
 
 @media	(max-width:	1200px)
 	.container
