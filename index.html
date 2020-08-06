@@ -569,8 +569,10 @@
 				<div class="footer__contact-form">
 					<h3 class="footer__title">Send us a message</h3>
 					<form action="send.php" method="POST" class="footer__form form">
+
 						<div class="footer__input-group">
-							<input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required>
+							<input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required
+								minlength="2">
 						</div>
 						<!-- /.footer__input-group -->
 						<div class="footer__input-group">

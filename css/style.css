@@ -1957,6 +1957,8 @@ template {
 }
 
 .footer__input-group {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
