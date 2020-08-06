@@ -35,11 +35,10 @@ ul {
 
 button {
   outline: none;
+  background: none;
   border: none;
   margin: 0;
   padding: 0;
-  background: #EC1F46;
-  color: #fff;
 }
 
 button:hover {
@@ -64,6 +63,11 @@ form, input {
   padding: 18px 23px;
   border: none;
   resize: none;
+}
+
+.button {
+  background: #EC1F46;
+  color: #fff;
 }
 
 .form-button {
