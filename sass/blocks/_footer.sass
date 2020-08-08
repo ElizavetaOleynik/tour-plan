@@ -80,6 +80,15 @@
 		font-size: 12px
 		line-height: 15px
 		color: #E0E0E0
+	&-phones
+		display: flex
+		&__text
+			display: flex
+			flex-direction: column
+		&__item
+			margin-bottom: 3px
+			&:last-child
+				margin-bottom: 0
 
 .footer-bottom
 	&__wrapper
@@ -145,6 +154,12 @@
 			&-form
 				grid-column: span 5
 				grid-row: 4
+		&__logo
+			width: 104px
+
+	.footer-bottom
+		&__wrapper
+			padding-top: 56px
 
 @media	( max-width: 768px )
 	.footer
@@ -152,8 +167,6 @@
 		&__input
 			&-group
 				flex-basis: 100%
-		&__logo
-			width: 104px
 
 @media	( max-width: 576px )
 	.footer

@@ -80,6 +80,7 @@
 		height: 30px
 		background-repeat: no-repeat
 		background-position: center
+		cursor: pointer
 		&--prev
 			left: 18px
 			background-image: url(../img/arrow-prev.svg)
@@ -164,6 +165,8 @@
 	height: 213px
 	border-radius: 10px
 	overflow: hidden
+	&__img
+		max-width: 100%
 
 @media	(max-width:	1200px)
 	.hotel-slider
@@ -219,9 +222,11 @@
 
 @media	(max-width:	576px)
 	.hotel-slider
-		height: 278px
+		height: 179px
+		&__img
+			height: 100%
+			min-width: 100%
 
 @media	(max-width:	320px)
 	.hotel
 		&-name
-			font-size: 20px
