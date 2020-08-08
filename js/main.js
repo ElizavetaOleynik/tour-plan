@@ -100,4 +100,12 @@ $(document).ready(function () {
 
 	AOS.init();
 
+	var map = $(".map");
+	map.on('click', openMap);
+
+	function openMap(event) {
+		map.append('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248879.07505605282!2d100.8439191143121!3d12.924711050103266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310296059bd3779b%3A0x37191e723a1a258!2sHilton%20Pattaya!5e0!3m2!1sru!2sua!4v1596906365663!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>')
+	}
+
+
 });
