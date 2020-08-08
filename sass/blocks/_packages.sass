@@ -15,7 +15,6 @@
 	&__item
 		&:first-child
 			grid-column-start: span 2
-			
 
 .package-card
 	position: relative
@@ -94,7 +93,6 @@
 		.package-card__features
 			margin-bottom: 37px
 
-		
 .package-features
 	max-width: 100%
 	font-size: 12px
@@ -106,7 +104,7 @@
 	&__icon
 		margin-right: 14px
 	&__desc
-	
+
 .package-book
 	display: flex
 	align-items: flex-end
@@ -127,9 +125,6 @@
 		font-size: 14px
 		padding: 10px 26px
 		border-radius: 4px
-		
-
-
 
 @media ( max-width: 1200px )
 	.package-card
@@ -138,6 +133,9 @@
 @media ( max-width: 992px )
 	.packages
 		padding: 40px 0 60px
+		&__title
+			font-size: 30px
+			margin-bottom: 50px
 	.packages-cards
 		grid-template-columns: repeat(2, 48%)
 		grid-row-gap: 20px
@@ -199,5 +197,3 @@
 		&:first-child
 			.package-card__info
 				padding: 20px
-
-			
