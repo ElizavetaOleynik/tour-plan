@@ -84,7 +84,7 @@ else {$result = "error";}
 // Отображение результата
 
 
-if ($button == 'sendMessage' and $button == 'sendContacts'){
+if ($button == 'sendMessage' or $button == 'sendContacts'){
     header('location: thankyou.html');
 }
 
