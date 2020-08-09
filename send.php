@@ -8,25 +8,43 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$button = $_POST['button'];
 
+
+if ($button == 'sendContacts'){
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+}
+
+if ($button == 'sendEmail'){
+    $title = "Зарегистрирован новый подписчик Best Tour Plan";
+    $body = "
+    <h2>Новый подписчик</h2><br>
+    <b>Почта подписчика:</b><br>$email
+    ";
+}
+
+if ($button == 'sendMessage'){
+    $title = "Зарегистрирован новый подписчик Best Tour Plan";
+    $body = "
+    <h2>Новый подписчик</h2><br>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br>
+    <b>Почта подписчика:</b><br>$email
+    ";
+}
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+
 
 // Переменные, которые отправляет пользователь
 $email = $_POST['email'];
 
 // Формирование самого письма
-$title = "Зарегистрирован новый подписчик Best Tour Plan";
-$body = "
-<h2>Новый подписчик</h2>
-<b>Почта подписчика:</b><br>$email
-";
 
 // Настройки PHPMailer 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -64,4 +82,14 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('location: thankyou.html');
+
+
+if ($button == 'sendMessage' and $button == 'sendContacts'){
+    header('location: thankyou.html');
+}
+
+if ($button == 'sendEmail'){
+    header('location: subscriber.html');
+}
+
+

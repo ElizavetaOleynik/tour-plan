@@ -18,7 +18,7 @@
 		<div class="navbar-top">
 			<div class="container">
 				<div class="navbar-top__content">
-					<a class="logo" href="/" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000">
+					<a class="logo" href="index.html" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000">
 						<img class="logo__img" loading="lazy" src="img/logo-gorizontal.svg" alt="logo: Best Tour Plan">
 					</a>
 					<!-- /.logo -->
@@ -117,10 +117,10 @@
 					<p class="hotel-text__desc">Half-Board / All Inclusive + Complimentary Activities + Child Stays Free
 					</p>
 				</div>
-				<div class="hotel-rating" data-toggle="modal" data-href="#rating-modal">
+				<button class="hotel-rating" data-toggle="modal" data-href="#rating-modal">
 					<span class="hotel-rating__text">User Rattings</span>
 					<span class="hotel-rating__evaluation">4.5/5</span>
-				</div>
+				</button>
 				<!-- /.hotel-rating -->
 			</div>
 			<div class="hotel-grid">
@@ -374,7 +374,7 @@
 			</h2>
 			<form class="subscribe newsletter__subscribe" action="send.php" method="POST">
 				<input class="subscribe__input" type="email" placeholder="Email*" name="email" required>
-				<button class="subscribe__button button">send</button>
+				<button class="subscribe__button button" name="button" value="sendEmail">send</button>
 			</form>
 		</div>
 		<!-- /.newsletter-wrapper -->
@@ -496,8 +496,8 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-wrapper">
-				<a href="/" class="footer__logo"><img class="logo footer__logo-img" loading="lazy" src="img/logo-vertical.svg"
-						alt="logo: best tour plan"></a>
+				<a href="index.html" class="footer__logo"><img class="logo footer__logo-img" loading="lazy"
+						src="img/logo-vertical.svg" alt="logo: best tour plan"></a>
 
 				<div class="footer__list footer__categories">
 					<h3 class="footer__title">All categories</h3>
@@ -609,7 +609,8 @@
 
 						<textarea class="footer__message message" placeholder="Message" name="message"></textarea>
 						<!-- /#.footer__message -->
-						<button class="footer__button button form-button" type="submit">Send</button>
+						<button class="footer__button button form-button" type="submit" name="button"
+							value="sendMessage">Send</button>
 						<!-- /.footer__button button -->
 						<span class="footer__info">* Required Fields</span>
 					</form>
@@ -652,7 +653,8 @@
 				<textarea class="modal__message message" placeholder="Message" name="message"></textarea>
 				<!-- /#.modal__message -->
 				<div class="modal__button-wrap">
-					<button class="modal__button button form-button" type="submit">Send</button>
+					<button class="modal__button button form-button" type="submit" name="button"
+						value="sendContacts">Send</button>
 					<!-- /.modal__button button -->
 					<span class="modal__info">* Required Fields</span>
 				</div>
@@ -678,7 +680,8 @@
 				<textarea class="modal__message message" placeholder="Message" name="message"></textarea>
 				<!-- /#.modal__message -->
 				<div class="modal__button-wrap">
-					<button class="modal__button button form-button" type="submit">Send</button>
+					<button class="modal__button button form-button" type="submit" name="button"
+						value="sendContacts">Send</button>
 					<!-- /.modal__button button -->
 					<span class="modal__info">* Required Fields</span>
 				</div>
